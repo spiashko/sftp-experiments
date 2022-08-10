@@ -1,0 +1,11 @@
+version: '2.2'
+
+services:
+  sftp:
+    image: atmoz/sftp
+    mem_limit: 256m
+    volumes:
+      - ./sftp-files:/home/admin/export
+    ports:
+      - "2222:22"
+    command: admin:test:1001
